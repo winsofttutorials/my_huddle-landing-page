@@ -28,11 +28,48 @@ body {
 
 nav {
   padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+
+#nav-links ul li {
+  display: inline-block;
+  margin: 20px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+#nav-links ul li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+#nav-links ul li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 50%;
+  background-color: var(--Soft-Magenta);
 }
 
 .logo {
   width: 180px;
 }
+
+#menuIcons {
+  color: #fff;
+  margin: 20px 0 20px;
+  display: none;
+}
+
+#menuIcons i {
+  font-size: 20px;
+}
+
 .row {
   display: flex;
   padding: 60px 5% 0;
@@ -109,8 +146,43 @@ button:hover {
     background-position: 80% -2%;
   }
 
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--Violet);
+  }
+
   .logo {
     width: 130px;
+  }
+
+  #menuIcons {
+    display: block;
+  }
+
+  #nav-links {
+    position: fixed;
+    top: 100px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--Violet);
+    padding-top: 50px;
+    transition: 0.4s;
+  }
+
+  #nav-links.sidebar {
+    right: 0;
+  }
+
+  #nav-links ul li {
+    display: block;
+  }
+
+  .hero-section {
+    margin-top: 140px;
   }
   .row {
     flex-direction: column;
