@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./images/logo.svg";
+import illustration from "./images/illustration-mockups.svg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <nav>
+          <img src={logo} alt="logo" className="logo" />
+        </nav>
+        <div className="hero-section">
+          <div className="row">
+            <div className="col1">
+              <img
+                src={illustration}
+                alt="illustration"
+                className="illustrationImg"
+              />
+            </div>
+            <div className="col2">
+              <h1 className="title">Build The Community Your Fans Will Love</h1>
+              <p>
+                Huddle re-imagines the way we build communities.You have a
+                voice, but so does your audience. Create connections with your
+                users as you engage in genuine discussions.{" "}
+              </p>
+              <div>
+                <button>Register</button>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <div className="socialIcons">
+              <span>
+                <i className="fab fa-facebook-f"></i>
+              </span>
+              <span>
+                <i className="fab fa-twitter"></i>
+              </span>
+              <span>
+                <i className="fab fa-instagram"></i>
+              </span>
+            </div>
+          </footer>
+        </div>
+      </div>
     </div>
   );
 }
