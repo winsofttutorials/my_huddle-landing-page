@@ -2,7 +2,6 @@ import "./App.css";
 import logo from "./images/logo.svg";
 import illustration from "./images/illustration-mockups.svg";
 import { Component } from "react";
-import { useState } from "react";
 
 class App extends Component {
   state = { clicked: false };
